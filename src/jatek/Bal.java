@@ -1,6 +1,6 @@
 package jatek;
 
-public class Bal extends Helyszin {
+public class Bal extends Helyszin implements MasikIrany{
 
 
     @Override
@@ -11,12 +11,22 @@ public class Bal extends Helyszin {
 
     @Override
     public String gomb() {
-        return "Nyugat";
+        return "Kelet";
     }
 
     @Override
     public Helyszin egyikIrany() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return new Kelet();
+    }
+
+    @Override
+    public Helyszin masikIrany() {
+        return new Nyugat();
+    }
+
+    @Override
+    public String gomb2() {
+        return "Nyugat";
     }
        
 }

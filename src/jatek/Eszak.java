@@ -8,32 +8,32 @@ package jatek;
  *
  * @author szlanka.peter
  */
-public class Jobbra extends Helyszin implements MasikIrany {
+public class Eszak extends Helyszin implements MasikIrany{
 
     @Override
     public String leiras() {
-        return "Ez van jobbra";
+        return "Ez Észak";
     }
 
     @Override
     public String gomb() {
-        return "Dél";
+        return "E2";
     }
 
     @Override
     public Helyszin egyikIrany() {
-        return new Del();
+        return new E2();
     }
 
     @Override
     public Helyszin masikIrany() {
-        return new Eszak();
+        return new E1();
 
     }
 
     @Override
     public String gomb2() {
-        return "Észak";
+        return "E1";
     }
-
+    
 }

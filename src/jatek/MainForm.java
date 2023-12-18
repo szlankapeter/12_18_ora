@@ -33,6 +33,11 @@ public class MainForm extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("masik irany");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("egyik irany");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,10 +86,24 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.setCaretPosition(0);
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
+            jButton1.setText(((MasikIrany) helyszin).gomb2());
         } else {
             jButton1.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        helyszin = ((MasikIrany) helyszin).masikIrany();
+        jButton2.setText(helyszin.gomb());
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+        jTextArea1.setCaretPosition(0);
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+            jButton1.setText(((MasikIrany) helyszin).gomb2());
+        } else {
+            jButton1.setVisible(false);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

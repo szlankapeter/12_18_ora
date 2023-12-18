@@ -1,19 +1,30 @@
 package jatek;
 
-public class Del extends Helyszin{
+public class Del extends Helyszin implements MasikIrany{
         @Override
     public String leiras(){
         return "Dél";
     }
 
-    @Override
+        @Override
     public Helyszin egyikIrany() {
-        throw new UnsupportedOperationException("");
+        return new D2();
+    }
+
+    @Override
+    public Helyszin masikIrany() {
+        return new D1();
+
     }
 
     @Override
     public String gomb() {
-        return "tovább";
+        return "D2";
+    }
+
+    @Override
+    public String gomb2() {
+        return "D1";
     }
     
 }
