@@ -13,4 +13,9 @@ public class Start extends Helyszin {
         return new Kezdes();
     }
     
+    @Override
+    public String gomb() {
+        return "menj tovább";
+    }
+    
 }

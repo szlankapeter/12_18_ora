@@ -11,5 +11,12 @@ public class Kezdes extends Helyszin{
     public Helyszin egyikIrany() {
         throw new UnsupportedOperationException("");
     }
+
+    @Override
+    public String gomb() {
+        return "menj balra";
+    }
+    
+    
     
 }
