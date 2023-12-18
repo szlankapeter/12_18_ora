@@ -1,3 +1,4 @@
 # Hétfőn hiányoztam
 
-#Ötletlések
+# Ötletlések
+# A state mina követése
