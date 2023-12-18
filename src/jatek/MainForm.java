@@ -4,6 +4,9 @@ public class MainForm extends javax.swing.JFrame {
 
     public MainForm() {
         initComponents();
+        
+        Helyszin helyszin = new Start();
+        jTextArea1.setText(helyszin.leiras());
     }
 
     @SuppressWarnings("unchecked")
@@ -19,6 +22,7 @@ public class MainForm extends javax.swing.JFrame {
         setTitle("Játék");
         setMinimumSize(new java.awt.Dimension(350, 200));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
@@ -26,6 +30,11 @@ public class MainForm extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,6 +65,11 @@ public class MainForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Helyszin helyszin = new Kezdes();
+        jTextArea1.setText(helyszin.leiras());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
