@@ -6,4 +6,10 @@ public class Kezdes extends Helyszin{
     public String leiras(){
         return "Ez a kezdes";
     }
+
+    @Override
+    public Helyszin egyikIrany() {
+        throw new UnsupportedOperationException("");
+    }
+    
 }
